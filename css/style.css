@@ -1,0 +1,318 @@
+nav {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+
+/* Awal Header */
+
+.header {
+    background-image: url(../img/hi.png);
+    background-size: cover;
+    background-position: right;
+    min-height: 600px;
+}
+.header .content {
+    margin-top: 100px;
+}
+
+.header .content .judul {
+    font-size: 5.5rem;
+    font-weight: 600;
+}
+
+.header .content .lead {
+    font-size: 1.5rem;
+}
+
+.header .content .icon {
+    margin-top: 10px;
+}
+
+.header .content .icon a {
+    margin-left: 5px;
+}
+
+.header .content .hubungi_saya {
+    padding: 5px;
+    width: 25%;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+
+
+
+/* Awal skill */
+
+.skill {
+    margin-top: 200px;
+    background-color: rgb(218, 218, 218);
+    min-height: 600px;
+}
+
+.skill .display-3 {
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+.skill .wadahElement {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+}
+.skill .wadahElement .element {
+    padding: 20px;
+    margin: 5%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+    min-height: 353px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: .5s;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+.skill .wadahElement .element .icon {
+    font-size: 3rem;
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+    
+}
+
+
+.skill .wadahElement .element p {
+    text-align: center;
+    margin: 50px 10px;
+}
+
+.skill .wadahElement .element h3 {
+    font-weight: 600;
+    text-align: center;
+}
+
+
+
+
+
+/* Awal Portofolio */
+.portofolio {
+    width: 95%;
+    margin: 100px auto;
+    padding: 50px; 
+}
+
+.portofolio .display-3 {
+    text-align: center;
+}
+
+.portofolio .keteranganPortofolio {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .3);
+    margin: 30px 0;
+    display: none;
+}
+
+.portofolio .keteranganPortofolio h3 {
+    font-size: 2.5rem;
+}
+.portofolio .keteranganPortofolio p {
+    margin: 50px 0;
+}
+.portofolio .keteranganPortofolio.active {
+    display: block;
+}
+.portofolio .wadahPortofolio {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+    position: relative;
+    margin-top: 30px;
+}
+
+
+.portofolio .wadahPortofolio:hover {
+    cursor: zoom-in;
+}
+
+.portofolio .wadahPortofolio .portofolio-prev {
+    position: absolute;
+    margin: 10px;
+    top: 100%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    background-color: #343a40;
+}
+
+.portofolio .wadahPortofolio .portofolio-next {
+    position: absolute;
+    top: 100%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    background-color: #343a40;
+    left: 60px;
+    margin: 10px;
+}
+
+body > section.portofolio > div > div.col-sm-7 > div > div > div.owl-nav > button svg {
+    color: white;
+}
+
+/* Awal Modal-Fael */
+.modal-fael {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.685);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-fael .content {
+    display: flex;
+    width: 70%;
+    height:80%;
+    flex-direction: column;
+    position: relative;
+    top: -100px;
+} 
+
+.modal-fael .content button {
+    width: 20%;
+    height: 20%;
+    align-self: flex-end;
+}
+
+.modal-fael .content .modal-fael-gambar {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Awal footer */
+
+footer {
+    padding: 20px;
+    background-color: #343a40;
+}
+
+
+
+
+
+
+
+
+/* Responsive Background */
+
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+    .header {
+        background-position: left;
+    }
+
+    .skill {
+        background-position: left;
+        background-position: 100% 100%;
+    }
+
+    .skill .display-3 {
+        font-size: 3.5rem ;
+        text-align: center;
+        font-weight: 500;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px){
+    .header {
+        background-position: center;
+        background-size: 100% 100%;
+    }
+
+    .skill {
+        background-position: left;
+        background-position: 100% 100%;
+    }
+
+    .modal-fael .content {
+        width: 70%;
+        height: 60%;
+    }
+    
+
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 992px){
+    .header  {
+        background-position: top right;
+        background-size: cover;    
+    }
+
+    .skill {
+        background-position: left;
+        background-position: 100% 100%;
+    }
+}
+
+/* Reponsive all */
+@media screen and (max-width: 768px){
+    .header .content .judul {
+        font-size: 4.5rem;
+    }
+
+    .header .content .lead {
+        font-size: 1.3rem;
+    }
+
+    .modal-fael .content {
+        width: 90%;
+        height: 50%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .portofolio {
+        top: 309px;
+    }
+}
+
+
+
+/* Hover */
+.svg-inline--fa {
+    color: black;
+}
+
+.svg-inline--fa:hover {
+    color: rgb(29, 43, 243);
+}
+
+
+.skill .wadahElement .element:hover {
+    background-color: #343a40;
+    color: white;
+}
+
+.skill .wadahElement .element:hover .icon {
+    color: white;
+}
