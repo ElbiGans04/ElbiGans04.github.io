@@ -1,6 +1,8 @@
-nav {
+.navbar {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+
 }
+
 
 
 /* Awal Header */
@@ -16,11 +18,13 @@ nav {
 }
 
 .header .content .judul {
+    font-size: 88px;
     font-size: 5.5rem;
     font-weight: 600;
 }
 
 .header .content .lead {
+    font-size: 24px;
     font-size: 1.5rem;
 }
 
@@ -46,13 +50,14 @@ nav {
 /* Awal skill */
 
 .skill {
-    margin-top: 200px;
+    margin-top: 100px;
     background-color: rgb(218, 218, 218);
     min-height: 600px;
+    padding-bottom: 80px;
 }
 
 .skill .display-3 {
-    margin-top: 50px;
+    margin: 50px 0;
     text-align: center;
 }
 
@@ -61,18 +66,30 @@ nav {
     width: 90%;
     height: 100%;
     margin: 0 auto;
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-content: center;
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .skill .wadahElement .element {
     padding: 20px;
     margin: 5%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
     min-height: 353px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition: .5s;
     transition: .5s;
     background-color: white;
     border-radius: 10px;
@@ -80,6 +97,7 @@ nav {
 
 
 .skill .wadahElement .element .icon {
+    font-size: 48px;
     font-size: 3rem;
     text-align: center;
     display: block;
@@ -105,8 +123,9 @@ nav {
 /* Awal Portofolio */
 .portofolio {
     width: 95%;
-    margin: 100px auto;
-    padding: 50px; 
+    margin: 50px auto;
+    padding: 50px;
+    min-height: 680px; 
 }
 
 .portofolio .display-3 {
@@ -125,6 +144,7 @@ nav {
 }
 
 .portofolio .keteranganPortofolio h3 {
+    font-size: 40px;
     font-size: 2.5rem;
 }
 .portofolio .keteranganPortofolio p {
@@ -144,32 +164,95 @@ nav {
     cursor: zoom-in;
 }
 
-.portofolio .wadahPortofolio .portofolio-prev {
+.portofolio .wadahPortofolio .portofolio-nav {
     position: absolute;
-    margin: 10px;
+    margin: 20px;
     top: 100%;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     color: white;
     background-color: #343a40;
+    padding: 5px;
 }
 
 .portofolio .wadahPortofolio .portofolio-next {
-    position: absolute;
-    top: 100%;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    color: white;
-    background-color: #343a40;
-    left: 60px;
-    margin: 10px;
+    left: 40px;
 }
 
-body > section.portofolio > div > div.col-sm-7 > div > div > div.owl-nav > button svg {
-    color: white;
+
+/* Ayat Alkitab */
+.Motivasi {
+    background-color: rgb(218, 218, 218);
+    padding: 50px;
 }
+
+.Motivasi .display-3 {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.Motivasi .isi {
+    font-size: 32px;
+    font-size: 2rem;
+    text-align: center;
+    
+}
+
+.Motivasi .kitabAyat {
+    font-size: 24px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* .Motivasi .wadahmotivasi {
+    display: none;
+} */
+
+.Motivasi .wadahmotivasi {
+    display: block;
+}
+
+.Motivasi .banner {
+    width: 30%;
+    height: 20px;
+    padding: 5px;
+    margin: 40px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+
+.bisakek {
+    border-top: 5px solid rgba(0, 0, 0, 0.527);
+    width: 30%;
+    height: 100%;
+    padding: 10px;
+    margin: 5px;
+}
+
+.Motivasi .banner span.active {
+    border-top: 5px solid rgb(0, 0, 0);
+}
+
+.owl-theme .owl-controls .owl-page {
+    display: inline-block;
+}
+.owl-theme .owl-controls .owl-page span {
+    background: none repeat scroll 0 0 #00f59f;
+    border-radius: 20px;
+    display: block;
+    height: 12px;
+    margin: 5px 7px;
+    opacity: 0.5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    width: 12px;
+}
+
+
+
+
 
 /* Awal Modal-Fael */
 .modal-fael {
@@ -180,17 +263,28 @@ body > section.portofolio > div > div.col-sm-7 > div > div > div.owl-nav > butto
     position: fixed;
     display: none;
     opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     background-color: rgba(0, 0, 0, 0.685);
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
     z-index: 999;
 }
 
 .modal-fael .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 70%;
     height:80%;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: relative;
     top: -100px;
 } 
@@ -198,7 +292,8 @@ body > section.portofolio > div > div.col-sm-7 > div > div > div.owl-nav > butto
 .modal-fael .content button {
     width: 20%;
     height: 20%;
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
 }
 
 .modal-fael .content .modal-fael-gambar {
@@ -217,13 +312,16 @@ footer {
 
 
 
-
+.animate-box {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
 
 
 
 /* Responsive Background */
 
-@media only screen and (max-width: 767px) and (min-width: 480px) {
+@media only screen and (max-width: 767px) and (min-width: 400px) {
     .header {
         background-position: left;
     }
@@ -233,10 +331,15 @@ footer {
         background-position: 100% 100%;
     }
 
-    .skill .display-3 {
-        font-size: 3.5rem ;
+    .skill .display-3 , .ayatAlkitab .display-3 {
+        font-size: 2rem ;
         text-align: center;
-        font-weight: 500;
+        font-weight: 400;
+        margin: 30px 0;
+    }
+
+    .portofolio .display-3 {
+        font-size: 3.5rem;
     }
 
 
@@ -274,6 +377,8 @@ footer {
     }
 }
 
+
+
 /* Reponsive all */
 @media screen and (max-width: 768px){
     .header .content .judul {
@@ -288,11 +393,67 @@ footer {
         width: 90%;
         height: 50%;
     }
+
+    .portofolio {
+        margin: 0;
+    }
+
+    .portofolio .row {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+    }
+
+    .portofolio .element-2 {
+        margin-bottom: 50px;
+    }
+
+    .ayatAlkitab .wadahAyatAlkitab .isiAyat {
+        font-size: 1.5rem;
+    }
+
+    .ayatAlkitab .wadahAyatAlkitab .kitabAyat {
+        font-size: 1rem;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
     .portofolio {
         top: 309px;
+    }
+}
+
+
+
+
+
+/* Animation  */
+@-webkit-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        -webkit-transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        -webkit-transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        -webkit-transform: translateX(-20px);
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }
 }
 
@@ -304,7 +465,7 @@ footer {
 }
 
 .svg-inline--fa:hover {
-    color: rgb(29, 43, 243);
+    color: rgba(0, 0, 0, 0.63);
 }
 
 
