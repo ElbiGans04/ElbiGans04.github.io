@@ -122,10 +122,6 @@ $('.owl-carousel').on("changed.owl.carousel", function(e) {
   t.addClass("active").fadeIn('slow')
 })
 
-$featureLinks.on("click", function() {
-  var e = $(this).data("owl-items");
-  $('.owl-carousel').trigger("to.owl.carousel", e), a($(this));
-});
 
 
 
